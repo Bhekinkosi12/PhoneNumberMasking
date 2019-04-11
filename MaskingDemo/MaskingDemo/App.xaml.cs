@@ -11,7 +11,7 @@ namespace MaskingDemo
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new PhoneMaskingExamplePage();
         }
 
         protected override void OnStart()
