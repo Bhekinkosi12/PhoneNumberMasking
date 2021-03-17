@@ -12,11 +12,13 @@ namespace MaskingDemo.MaskingValidator
             entry.TextChanged += OnEntry_TextChanged;
             base.OnAttachedTo(entry);
         }
+        
         protected override void OnDetachingFrom(Entry entry)
         {
             entry.TextChanged -= OnEntry_TextChanged;
             base.OnDetachingFrom(entry);
         }
+
 
         private void OnEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -26,6 +28,7 @@ namespace MaskingDemo.MaskingValidator
                     return;
 
                 var value = e.NewTextValue;
+                
                 if (value.Length == 3)
                 {
                     ((Entry)sender).Text += "-";
@@ -38,6 +41,7 @@ namespace MaskingDemo.MaskingValidator
                 }
 
                 ((Entry)sender).Text = e.NewTextValue;
+                
             }
         }
     }
